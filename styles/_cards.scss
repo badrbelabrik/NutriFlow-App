@@ -1,0 +1,32 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: $size-sm;
+    font-family: $font-family-base;
+    padding: $space-sm $space-xs;
+    border-radius: $radius-md;
+    background: linear-gradient(135deg, #C7F36B, #7FAE3C);
+    &-title{
+    font-family: $font-family-base;
+    font-size: $size-md;
+    }
+    &-img{
+    display: relative;
+    height: $size-xl;
+    width: $size-xl;
+    }
+    &-icon{
+        display: absolute;
+    }
+}
+
+.nav{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: white;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+}
