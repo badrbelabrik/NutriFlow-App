@@ -1,24 +1,55 @@
 @use "variables" as *;
 
+.header{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  &-content{
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+  }
+  &-main-title{
+    font-family: $font-family-geneva;
+    font-weight: bold;
+    font-size: $size-md;
+  }
+  &-second-title{
+    font-family: $font-family-geneva;
+    font-size: $size-sm;
+  }
+}
+.search-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $gray;
+  border-radius: $radius-md;
+}
 .nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: sticky;
+    position: fixed;
     bottom: $space-sm;
-    left: 0;
-    width: 100%;
+    width: 80%;
     background-color: white;
     box-shadow: $shadow-md;
     height: 64px;
-    border-top-left-radius: $size-md;
-    border-top-right-radius: $size-md;
+    border-radius: $radius-lg;
+    &-icon{
+    font-size: 24px;
+    color: #089B63;
+    }
 }
 
-.icon{
-    font-size: $size-lg;
-    color: #089B63;
-}
+.btn { 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+  }
+
+
 
 .loader {
   width: 50px;
