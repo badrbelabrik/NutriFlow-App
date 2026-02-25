@@ -1,4 +1,22 @@
-@use "variables";
+@use "variables" as *;
 @use "cards";
 @use "modal";
 @use "responsive";
+@use "components";
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $space-sm;
+    padding: $space-lg $space-lg;
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+}

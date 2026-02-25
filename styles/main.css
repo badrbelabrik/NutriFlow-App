@@ -1,18 +1,113 @@
-/* Error: Undefined variable.
- *   ,
- * 6 |     gap: $size-sm;
- *   |          ^^^^^^^^
- *   '
- *   styles\_cards.scss 6:10  @use
- *   styles\main.scss 2:1     root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 6 \2502      gap: $size-sm;\d\a   \2502           ^^^^^^^^\a   \2575 \a   styles\\_cards.scss 6:10  @use\a   styles\\main.scss 2:1     root stylesheet";
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-family: "Inter", sans-serif;
+  padding: 8px 4px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #C7F36B, #7FAE3C);
 }
+.card-title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+.card-img {
+  position: relative;
+  height: 64px;
+  width: 64px;
+  border-radius: 16px;
+}
+.card-icon {
+  position: absolute;
+}
+.card-pills {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.card-pill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background-color: #C7F36B;
+  border-radius: 16px;
+}
+
+@media (min-width: 768px) {
+  #root {
+    flex-direction: row;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  height: 64px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.icon {
+  font-size: 32px;
+  color: #089B63;
+}
+
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #25b09b;
+  --_m:
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+.loader.hidden {
+  display: none;
+}
+
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 32px;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=main.css.map */

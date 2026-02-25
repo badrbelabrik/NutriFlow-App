@@ -1,9 +1,11 @@
+@use "variables" as *;
+
 .card{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: $size-sm;
+    gap: $space-sm;
     font-family: $font-family-base;
     padding: $space-sm $space-xs;
     border-radius: $radius-md;
@@ -13,12 +15,32 @@
     font-weight: bold;
     font-size: $size-md;
     }
+    &-content{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: $space-lg;
+    }
     &-img{
-    display: relative;
+    position: relative;
     height: $size-xl;
     width: $size-xl;
+    border-radius: $radius-md;
     }
     &-icon{
-    display: absolute;
+    position: absolute;
+    }
+    &-pills{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;    
+    }
+    &-pill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $space-xs;
+    background-color: #C7F36B;
+    border-radius: $radius-md;
     }
 }

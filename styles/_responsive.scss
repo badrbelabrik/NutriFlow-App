@@ -1,0 +1,7 @@
+@use "variables" as *;
+
+@media (min-width: 768px) {
+  #root {
+    flex-direction: row; // Sidebar f l-janb
+  }
+}
