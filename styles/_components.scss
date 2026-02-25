@@ -2,21 +2,29 @@
 
 .header{
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   align-items: center;
   &-content{
     display: flex;
     flex-direction: column;
-    gap: $space-sm;
+    justify-content: center;
   }
   &-main-title{
     font-family: $font-family-geneva;
-    font-weight: bold;
-    font-size: $size-md;
+    font-weight: $font-weight-bold;
+    font-size: 24px;
+    margin: 0;
   }
   &-second-title{
     font-family: $font-family-geneva;
-    font-size: $size-sm;
+    font-size: $size-md;
+    margin: 0;
+  }
+  &-img{
+    width: 64px;
+    height: 64px; 
   }
 }
 .search-bar{
@@ -24,7 +32,8 @@
   justify-content: space-between;
   align-items: center;
   background-color: $gray;
-  border-radius: $radius-md;
+  border-radius: $radius-lg;
+  height: 48px;
 }
 .nav{
     display: flex;
