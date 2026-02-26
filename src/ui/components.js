@@ -29,7 +29,7 @@ export function Card(recipe){
                 </div>
                 <div class="card-img-wrapper">
                     <img class="card-img" src="${recipe.image}" alt="${recipe.name}">
-                    <i class="card-icon fa-regular fa-heart" data-fav="${recipe.id}"></i>
+                    <i class="card-icon fa-solid fa-heart" data-fav="${recipe.id}"></i>
                 </div>
             </div>`
 }
