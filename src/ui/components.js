@@ -9,7 +9,11 @@ export function Header(){
 }
 
 export function SearchBar(){
-    return ``
+    return `<div class="search-bar">
+                <i class="search-bar-icon fa-solid fa-magnifying-glass"></i>
+                <input class="search-bar-input" type="text" id="lname" name="lname" placeholder="Search">
+                <i class="search-bar-icon fa-solid fa-microphone"></i>
+            </div>`
 }
 
 export function Card(){

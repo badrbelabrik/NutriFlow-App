@@ -8,9 +8,11 @@
     align-items: center;
     gap: $space-sm;
     font-family: $font-family-base;
-    padding: $space-sm $space-xs;
+    padding: $space-xs $space-sm ;
     border-radius: $radius-md;
-    background: linear-gradient(135deg, #C7F36B, #7FAE3C);
+    // background: linear-gradient(135deg, #C7F36B, #7FAE3C);
+    background: linear-gradient(135deg, #089B63, #1dc786);
+    box-shadow: $shadow-sm;
     &-title{
     font-family: $font-family-geneva;
     font-weight: bold;

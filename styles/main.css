@@ -6,9 +6,10 @@
   align-items: center;
   gap: 8px;
   font-family: "Inter", sans-serif;
-  padding: 8px 4px;
+  padding: 4px 8px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #C7F36B, #7FAE3C);
+  background: linear-gradient(135deg, #089B63, #1dc786);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 .card-title {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -78,12 +79,24 @@
 }
 
 .search-bar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #e9e9ea;
   border-radius: 32px;
-  height: 48px;
+  padding-right: 8px;
+  padding-left: 8px;
+  height: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+.search-bar-input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.search-bar-icon {
+  color: #6e7175;
 }
 
 .nav {
@@ -95,7 +108,7 @@
   width: 80%;
   background-color: white;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-  height: 64px;
+  height: 52px;
   border-radius: 32px;
 }
 .nav-icon {
@@ -149,7 +162,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 20px;
   padding: 32px 32px;
   width: 100%;
   margin: 0 auto;
