@@ -1,3 +1,5 @@
+import { ListCards } from "./render.js"
+
 export function Header(){
     return `<div class="header">
                 <div class="header-content">
@@ -15,18 +17,26 @@ export function SearchBar(){
                 <i class="search-bar-icon fa-solid fa-microphone"></i>
             </div>`
 }
-
-export function Card(){
-    return `<div class="card">
+export function Card(recipe){
+    return `<div class="card" data-id="${recipe.id}">
                 <div class="card-content">
-                    <p class="card-title">Classic Margherita Pizza</p>
-                    <img class="card-img" src="images/1.png" alt="">
+                    <p class="card-title">${recipe.name}</p>
+                    <div class="card-pills">
+                        <div class="card-pill"><i class="fa-solid fa-clock"></i>${recipe.prepTimeMinutes}min</div>
+                        <div class="card-pill"><i class="fa-solid fa-user"></i>${recipe.servings}</div>
+                        <div class="card-pill"><i class="card-calorie-icon fa-solid fa-fire-flame-curved"></i>${recipe.caloriesPerServing}Kcal</div>
+                    </div>
                 </div>
-                <div class="pills">
-                    <div class="pill"></div>
-                    <div class="pill"></div>
-                    <div class="pill"></div>
+                <div class="card-img-wrapper">
+                    <img class="card-img" src="${recipe.image}" alt="${recipe.name}">
+                    <i class="card-icon fa-regular fa-heart" data-fav="${recipe.id}"></i>
                 </div>
+            </div>`
+}
+
+export function CardsContainer(recipes){
+    return `<div class="cards-container">
+                ${ListCards(recipes)}
             </div>`
 }
 

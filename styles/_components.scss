@@ -32,7 +32,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $gray;
+  // background-color: $gray;
   border-radius: $radius-lg;
   padding-right: $space-sm;
   padding-left: $space-sm;
@@ -53,9 +53,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
+    position: sticky;
     bottom: $space-sm;
-    width: 80%;
+    width: 100%;
     background-color: white;
     box-shadow: $shadow-md;
     height: 52px;
@@ -71,8 +71,13 @@
     border: none; 
     cursor: pointer; 
   }
-
-
+.cards-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $space-md;
+}
 
 .loader {
   width: 50px;

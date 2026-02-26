@@ -3,16 +3,16 @@
 .card{
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: $space-sm;
     font-family: $font-family-base;
-    padding: $space-xs $space-sm ;
+    padding: $space-sm $space-sm ;
     border-radius: $radius-md;
     // background: linear-gradient(135deg, #C7F36B, #7FAE3C);
-    background: linear-gradient(135deg, #089B63, #1dc786);
-    box-shadow: $shadow-sm;
+    background: linear-gradient(135deg, $primary-green, $secondary-green);
+    box-shadow: $shadow-md;
+    cursor: pointer;
     &-title{
     font-family: $font-family-geneva;
     font-weight: bold;
@@ -20,30 +20,43 @@
     }
     &-content{
         display:flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: $space-lg;
+        flex-direction: column;
+        justify-content: center;
+        gap: $space-md;
+    }
+    &-img-wrapper{
+    position: relative;
     }
     &-img{
-    position: relative;
-    height: $size-xl;
-    width: $size-xl;
+    height: $size-2xl;
+    width: $size-2xl;
     border-radius: $radius-md;
+    object-fit: cover;
+    display: block;
     }
     &-icon{
     position: absolute;
+    top: 6px;
+    right: 6px;
+    color: white;
     }
     &-pills{
     display: flex;
     align-items: center;
-    justify-content: space-around;    
+    gap: $size-sm;    
     }
     &-pill{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: $space-xs;
-    background-color: #C7F36B;
-    border-radius: $radius-md;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    }
+    &-calorie-icon{
+        color: $calorie-green;
     }
 }

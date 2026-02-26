@@ -1,12 +1,12 @@
 import loader from "./ui/loader.js"
-import {Header,SearchBar,Card,Navbar} from "./ui/components.js"
-import { getRecipes} from "./api/recipeProvider.js";
+import {Header,SearchBar,CardsContainer,Navbar} from "./ui/components.js"
+import { CallRecipes} from "./api/recipeProvider.js";
 
-// const recipes = await getRecipes()
+const recipes = await CallRecipes()
 const root = document.getElementById("root")
-root.innerHTML = `  ${Header()}
+root.innerHTML = `${Header()}
                     ${SearchBar()}
-                    ${Card()}
+                    ${CardsContainer(recipes)}
                     ${Navbar()}`;
-// console.log(recipes)
+
 
