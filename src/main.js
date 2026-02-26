@@ -1,12 +1,18 @@
-import loader from "./ui/loader.js"
-import {Header,SearchBar,CardsContainer,Navbar} from "./ui/components.js"
 import { CallRecipes} from "./api/recipeProvider.js";
+import Router from "./router.js";
+import { getRecipes, setRecipes } from "./services/storageService.js";
 
-const recipes = await CallRecipes()
-const root = document.getElementById("root")
-root.innerHTML = `${Header()}
-                    ${SearchBar()}
-                    ${CardsContainer(recipes)}
-                    ${Navbar()}`;
+async function initApp(){
+    let recipes = getRecipes()
+    if(!recipes || recipes.length === 0){
+        recipes = await CallRecipes()
+        setRecipes(recipes)
+    }
+    Router.init();
+}
 
+// const recipes = await CallRecipes()
+// setRecipes(recipes)
 
+window.addEventListener("DOMContentLoaded", initApp);
+window.addEventListener("hashchange", Router.init);

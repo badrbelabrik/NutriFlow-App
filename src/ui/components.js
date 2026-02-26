@@ -47,3 +47,10 @@ export function Navbar(){
                 <button class="btn"><i class="nav-icon fa-solid fa-heart"></i></button>
             </div>`
 }
+
+export function MainLayout(recipes){
+    return `${Header()}
+            ${SearchBar()}
+            ${CardsContainer(recipes)}
+            ${Navbar()}`
+}
