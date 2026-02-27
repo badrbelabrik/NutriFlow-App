@@ -25,3 +25,20 @@ body {
     width: 100%;
     margin: 0 auto;
 }
+@media(min-width: 768px){
+    #root{
+      max-width: 768px;
+    }
+    .nav{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      position: fixed;
+      top: 50%;  
+      transform: translateY(-50%);
+      width: 80px;
+      height: 80%;
+      left: 0;
+      border-radius: $radius-md;
+    }
+}

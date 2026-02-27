@@ -17,7 +17,7 @@ export function SearchBar(){
                 <i class="search-bar-icon fa-solid fa-microphone"></i>
             </div>`
 }
-export function Card(recipe){
+export function Card(recipe,classGreen){
     return `<div class="card" data-id="${recipe.id}">
                 <div class="card-content">
                     <p class="card-title">${recipe.name}</p>
@@ -29,7 +29,7 @@ export function Card(recipe){
                 </div>
                 <div class="card-img-wrapper">
                     <img class="card-img" src="${recipe.image}" alt="${recipe.name}">
-                    <i class="card-icon fa-solid fa-heart" data-fav="${recipe.id}"></i>
+                    <i class="card-icon ${classGreen} fa-solid fa-heart" data-fav="${recipe.id}"></i>
                 </div>
             </div>`
 }
@@ -52,5 +52,11 @@ export function MainLayout(recipes){
     return `${Header()}
             ${SearchBar()}
             ${CardsContainer(recipes)}
+            ${Navbar()}`
+}
+export function FavoritesLayout(){
+    return `${Header()}
+            ${SearchBar()}
+            ${CardsContainer(favourites)}
             ${Navbar()}`
 }

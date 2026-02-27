@@ -9,7 +9,6 @@
     font-family: $font-family-base;
     padding: $space-sm $space-sm ;
     border-radius: $radius-md;
-    // background: linear-gradient(135deg, #C7F36B, #7FAE3C);
     background: linear-gradient(135deg, $primary-green, $secondary-green);
     box-shadow: $shadow-md;
     cursor: pointer;
@@ -49,6 +48,9 @@
             opacity: 0.9; transform: translateY(-2px);
             color: $primary-green;
             outline-style: outset;
+        }
+        &-green{
+            color: $primary-green;
         }
     }
     &-pills{

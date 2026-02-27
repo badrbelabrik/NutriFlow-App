@@ -5,6 +5,7 @@ export const root = document.addEventListener("click", function(e){
     if(el.closest(".card-icon")){
         const id = el.closest(".card-icon").dataset.fav
         addToFav(id)
+        el.closest(".card-icon").classList.toggle("card-icon-green")
         return
     }
     if(el.closest(".card")){
