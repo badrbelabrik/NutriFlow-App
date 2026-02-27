@@ -24,7 +24,7 @@ export function addToFav(id){
             const currentRecipe = recipes.find(item => item.id == id)
             favourites.push(currentRecipe)
             setFavourites(favourites)
-    } else{
+    } else {
         const newFavourites = favourites.filter(item => item.id !== Number(id))
         setFavourites(newFavourites)
     }

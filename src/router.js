@@ -1,5 +1,5 @@
 import { CallRecipes } from "./api/recipeProvider.js";
-import { FavoritesLayout, MainLayout } from "./ui/components.js";
+import { DetailsLayout, FavoritesLayout, MainLayout } from "./ui/components.js";
 import { getRecipes,getFavourites } from "./services/storageService.js";
 
 const Router = {
@@ -13,6 +13,8 @@ const Router = {
                             root.innerHTML = `${MainLayout(recipes)}`;
                     } else if(hash == "#/favourites"){
                         root.innerHTML = `${FavoritesLayout(favourites)}`
+                    } else if(hash.startsWith("#/details")){
+                        root.innerHTML = `${DetailsLayout()}`
                     }
     },
     nav: () => {

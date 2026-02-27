@@ -10,7 +10,7 @@ export const root = document.addEventListener("click", function(e){
     }
     if(el.closest(".card")){
         const id = el.closest(".card").dataset.id
-        console.log("you clicked on the card with id:"+id)
+        this.location.hash = "#/details/"+id
     }
     if(el.closest(".go-favourites")){
         console.log("you clicked the button to go to favourites")
