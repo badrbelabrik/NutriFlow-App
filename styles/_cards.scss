@@ -13,6 +13,9 @@
     background: linear-gradient(135deg, $primary-green, $secondary-green);
     box-shadow: $shadow-md;
     cursor: pointer;
+    &:hover{
+        transform: scale(1.1)
+    }
     &-title{
     font-family: $font-family-geneva;
     font-weight: bold;
@@ -26,6 +29,9 @@
     }
     &-img-wrapper{
     position: relative;
+            &:hover{
+            transform: scale(1.2)
+        }
     }
     &-img{
     height: $size-2xl;
@@ -60,6 +66,9 @@
     border-radius: 999px;
     font-size: 12px;
     font-weight: 500;
+        &:hover{
+            transform: scale(1.2)
+        }
     }
     &-calorie-icon{
         color: $calorie-green;

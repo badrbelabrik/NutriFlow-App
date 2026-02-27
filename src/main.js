@@ -1,6 +1,7 @@
 import { CallRecipes} from "./api/recipeProvider.js";
 import Router from "./router.js";
 import { getRecipes,getRecipesTimestamp,setRecipes } from "./services/storageService.js";
+import { root } from "./events.js";
 
 async function initApp(){
     let recipes = getRecipes()
@@ -13,13 +14,6 @@ async function initApp(){
     Router.init();
 }
 
-const root = document.addEventListener("click", function(e){
-    const el = e.target
-    if(el.closest(".card")){
-        const id = el.closest(".card").dataset.id
-        console.log("you clicked on a card that have id:"+ id)
-    }
-})
 
-window.addEventListener("DOMContentLoaded", initApp);
+window.addEventListener("DOMContentLoaded", initApp, root);
 window.addEventListener("hashchange", Router.init);

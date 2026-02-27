@@ -11,6 +11,9 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
+.card:hover {
+  transform: scale(1.1);
+}
 .card-title {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
@@ -24,6 +27,9 @@
 }
 .card-img-wrapper {
   position: relative;
+}
+.card-img-wrapper:hover {
+  transform: scale(1.2);
 }
 .card-img {
   height: 96px;
@@ -59,6 +65,9 @@
   border-radius: 999px;
   font-size: 12px;
   font-weight: 500;
+}
+.card-pill:hover {
+  transform: scale(1.2);
 }
 .card-calorie-icon {
   color: #9bff05;
