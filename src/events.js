@@ -12,4 +12,11 @@ export const root = document.addEventListener("click", function(e){
         const id = el.closest(".card").dataset.id
         console.log("you clicked on the card with id:"+id)
     }
+    if(el.closest(".go-favourites")){
+        console.log("you clicked the button to go to favourites")
+        location.hash = "#/favourites"
+    }
+    if(el.closest(".go-home")){
+        location.hash = "#/home"
+    }
 })

@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 .card{
-    width: 100%;
+    width: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,7 +20,7 @@
     font-weight: bold;
     font-size: $size-md;
     }
-    &-content{
+    &-content{  
         display:flex;
         flex-direction: column;
         justify-content: center;

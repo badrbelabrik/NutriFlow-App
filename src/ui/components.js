@@ -42,9 +42,9 @@ export function CardsContainer(recipes){
 
 export function Navbar(){
     return `<div class="nav">
-                <button class="btn"><i class="nav-icon fa-solid fa-house"></i></button>
+                <button class="go-home btn"><i class="nav-icon fa-solid fa-house"></i></button>
                 <button class="btn"><i class="nav-icon fa-solid fa-calendar-days"></i></button>
-                <button class="btn"><i class="nav-icon fa-solid fa-heart"></i></button>
+                <button class="go-favourites btn"><i class="nav-icon fa-solid fa-heart"></i></button>
             </div>`
 }
 
@@ -54,7 +54,7 @@ export function MainLayout(recipes){
             ${CardsContainer(recipes)}
             ${Navbar()}`
 }
-export function FavoritesLayout(){
+export function FavoritesLayout(favourites){
     return `${Header()}
             ${SearchBar()}
             ${CardsContainer(favourites)}

@@ -22,7 +22,6 @@ export function addToFav(id){
     const checkIfExist = favourites.find(item => item.id == id)
     if(!checkIfExist){
             const currentRecipe = recipes.find(item => item.id == id)
-            console.log(currentRecipe)
             favourites.push(currentRecipe)
             setFavourites(favourites)
     } else{

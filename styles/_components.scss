@@ -53,9 +53,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: sticky;
+    position: fixed;
     bottom: $space-sm;
-    width: 100%;
+    width: 87%;
     background-color: white;
     box-shadow: $shadow-md;
     height: 52px;
