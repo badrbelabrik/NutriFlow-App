@@ -1,6 +1,6 @@
 import { addToFav } from "./services/storageService.js"
 
-export const root = document.addEventListener("click", function(e){
+export const clicks = document.addEventListener("click", function(e){
     const el = e.target
     if(el.closest(".card-icon")){
         const id = el.closest(".card-icon").dataset.fav
@@ -18,5 +18,12 @@ export const root = document.addEventListener("click", function(e){
     }
     if(el.closest(".go-home")){
         location.hash = "#/home"
+    }
+})
+
+export const inputs = document.addEventListener("input", function(e){
+    const el = e.target
+    if(el.classList.contains("search-bar")){
+        console.log(el.value)
     }
 })

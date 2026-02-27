@@ -1,7 +1,7 @@
 import { CallRecipes} from "./api/recipeProvider.js";
 import Router from "./router.js";
 import { getRecipes,getRecipesTimestamp,setRecipes } from "./services/storageService.js";
-import { root } from "./events.js";
+import { clicks } from "./events.js";
 
 async function initApp(){
     let recipes = getRecipes()
@@ -15,5 +15,5 @@ async function initApp(){
 }
 
 
-window.addEventListener("DOMContentLoaded", initApp, root);
+window.addEventListener("DOMContentLoaded", initApp, clicks);
 window.addEventListener("hashchange", Router.init);
