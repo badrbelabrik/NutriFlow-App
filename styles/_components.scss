@@ -64,6 +64,11 @@
     font-size: 24px;
     color: #089B63;
     }
+    &-title{
+      display: none;
+      color: $primary-green;
+      font-weight: $font-weight-bold
+    }
 }
 
 .btn { 

@@ -145,6 +145,11 @@
   font-size: 24px;
   color: #089B63;
 }
+.nav-title {
+  display: none;
+  color: #089B63;
+  font-weight: 700;
+}
 
 .btn {
   background: none;
@@ -215,14 +220,32 @@ body {
   .nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 50px;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    width: 80px;
+    width: 100px;
     height: 80%;
     left: 0;
     border-radius: 16px;
+    box-shadow: none;
+  }
+  .nav-icon {
+    font-size: xx-large;
+  }
+  .nav:hover .nav-title {
+    display: block;
+  }
+  .nav .nav-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  .nav .nav-flex:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 32px;
   }
 }
 

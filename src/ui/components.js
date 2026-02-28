@@ -42,9 +42,9 @@ export function CardsContainer(recipes){
 
 export function Navbar(){
     return `<div class="nav">
-                <button class="go-home btn"><i class="nav-icon fa-solid fa-house"></i></button>
-                <button class="go-details btn"><i class="nav-icon fa-solid fa-calendar-days"></i></button>
-                <button class="go-favourites btn"><i class="nav-icon fa-solid fa-heart"></i></button>
+                <button class="nav-flex go-home btn"><i class="nav-icon fa-solid fa-house"></i><p class="nav-title">Home</p></button>
+                <button class="nav-flex go-details btn"><i class="nav-icon fa-solid fa-calendar-days"></i><p class="nav-title">Details</p></button>
+                <button class="nav-flex go-favourites btn"><i class="nav-icon fa-solid fa-heart"></i><p class="nav-title">Favourites</p></button>
             </div>`
 }
 
