@@ -2,6 +2,7 @@ import { CallRecipes} from "./api/recipeProvider.js";
 import Router from "./router.js";
 import { getRecipes,setRecipes } from "./services/storageService.js";
 import { clicks } from "./events.js";
+import { calcCalories } from "./services/calorieService.js";
 
 async function initApp(){
     let recipes = getRecipes()
@@ -11,7 +12,7 @@ async function initApp(){
     }
     Router.init();
 }
-
+console.log(calcCalories())
 
 window.addEventListener("DOMContentLoaded", ()=>
     initApp(), );
