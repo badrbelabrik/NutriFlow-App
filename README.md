@@ -5,7 +5,6 @@ view details, search meals, and manage favourite recipes.
 Built using Vanilla JavaScript, SCSS, and a custom hash-based router.
 
 🚀 Features
-
 ✅ Fetch recipes from an external API
 ✅ Client-side routing (SPA behavior)
 ✅ Recipe details page with dynamic ID routing
@@ -15,4 +14,3 @@ Built using Vanilla JavaScript, SCSS, and a custom hash-based router.
 ✅ Live recipe search
 ✅ Responsive design (mobile → desktop)
 ✅ Interactive navigation bar
-
