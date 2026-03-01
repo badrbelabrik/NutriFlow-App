@@ -15,3 +15,4 @@ Built using Vanilla JavaScript, SCSS, and a custom hash-based router.
 ✅ Live recipe search
 ✅ Responsive design (mobile → desktop)
 ✅ Interactive navigation bar
+
