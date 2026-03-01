@@ -14,7 +14,9 @@ const Router = {
                     } else if(hash == "#/favourites"){
                         root.innerHTML = `${FavoritesLayout(favourites)}`
                     } else if(hash.startsWith("#/details")){
-                        root.innerHTML = `${DetailsLayout()}`
+                        const id = hash.split("/")[2]
+                        const recipe = recipes.find(item => item.id == id)
+                        root.innerHTML = `${DetailsLayout(recipe)}`
                     }
     },
     nav: () => {

@@ -76,12 +76,48 @@
     border: none; 
     cursor: pointer; 
   }
+
 .cards-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: $space-md;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+    &-img{
+      width: 100%;
+      height: 300px;
+      border-radius: $radius-md;
+    }
+    &-title{
+      font-family: $font-family-geneva;
+      font-weight: $font-weight-bold;
+    }
+    &-pills{
+      display: flex;
+      align-items: center;
+      gap: $space-md;
+    }
+    &-divider{
+      border: none;
+      height: 2px;
+      background-color: #ccc;
+    }
+    &-ingredients{
+      &-title{
+        font-weight: $font-weight-bold;
+      }
+    }
+    &-instructions{
+      &-title{
+        font-weight: $font-weight-bold;
+      }
+    }
 }
 
 .loader {

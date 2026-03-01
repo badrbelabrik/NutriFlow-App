@@ -1,7 +1,41 @@
 @use "variables" as *;
+@use "cards";
+@use "modal";
+@use "components";
 
-@media (min-width: 768px) {
-  #root {
-    flex-direction: row; // Sidebar f l-janb
-  }
+@media(min-width: 880px){
+    #root{
+      max-width: 768px;
+    }
+    .nav{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      position: fixed;
+      top: 50%;  
+      transform: translateY(-50%);
+      width: 100px;
+      height: 80%;
+      left: 0;
+      border-radius: $radius-md;
+      box-shadow: none;
+      &-icon{
+        font-size: xx-large;
+      }
+      &:hover .nav-title{
+        display: block;
+      }    
+      .nav-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $space-md;
+        &:hover {
+          box-shadow: $shadow-md;
+          border-radius: $radius-lg;
+        }
+      }
+    }
+
 }

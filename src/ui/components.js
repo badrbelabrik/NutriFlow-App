@@ -1,6 +1,6 @@
 import { ListCards } from "./render.js"
 
-export function Header(){
+export function Header() {
     return `<div class="header">
                 <div class="header-content">
                 <p class="header-main-title">Nutri-Flow</p>
@@ -10,14 +10,14 @@ export function Header(){
             </div>`
 }
 
-export function SearchBar(){
+export function SearchBar() {
     return `<div class="search-bar">
                 <i class="search-bar-icon fa-solid fa-magnifying-glass"></i>
                 <input class="search-bar-input" type="text" id="lname" name="lname" placeholder="Search">
                 <i class="search-bar-icon fa-solid fa-microphone"></i>
             </div>`
 }
-export function Card(recipe,classGreen){
+export function Card(recipe, classGreen) {
     return `<div class="card" data-id="${recipe.id}">
                 <div class="card-content">
                     <p class="card-title">${recipe.name}</p>
@@ -34,13 +34,13 @@ export function Card(recipe,classGreen){
             </div>`
 }
 
-export function CardsContainer(recipes){
+export function CardsContainer(recipes) {
     return `<div class="cards-container">
                 ${ListCards(recipes)}
             </div>`
 }
 
-export function Navbar(){
+export function Navbar() {
     return `<div class="nav">
                 <button class="nav-flex go-home btn"><i class="nav-icon fa-solid fa-house"></i><p class="nav-title">Home</p></button>
                 <button class="nav-flex go-details btn"><i class="nav-icon fa-solid fa-calendar-days"></i><p class="nav-title">Details</p></button>
@@ -48,20 +48,44 @@ export function Navbar(){
             </div>`
 }
 
-export function MainLayout(recipes){
+export function Details(recipe) {
+    return `<div class="details">
+                <img class="details-img" src="${recipe.image}" alt="">
+                <p class="details-title">${recipe.name}</p>
+                <div class="details-pills">
+                    <i class="fa-regular fa-clock">${recipe.prepTimeMinutes}</i>
+                    <i class="fa-solid fa-signal">${recipe.difficulty}</i>
+                    <i class="fa-solid fa-fire-flame-curved">${recipe.caloriesPerServing}</i>
+                </div>
+                <div class="details-divider"></div>
+                <div class="details-ingredients">
+                    <p class="details-ingredients-title">Ingredients</p>
+                    <p>${recipe.ingredients}</p>
+                </div>
+                <div class="details-divider"></div>
+                <div class="details-instructions">
+                    <p class="details-instructions-title">Instructions</p>
+                    <p>${recipe.instructions}</p>
+                </div>
+                </div>
+            </div>`
+}
+
+export function MainLayout(recipes) {
     return `${Header()}
             ${SearchBar()}
             ${CardsContainer(recipes)}
             ${Navbar()}`
 }
-export function FavoritesLayout(favourites){
+export function FavoritesLayout(favourites) {
     return `${Header()}
             ${SearchBar()}
             ${CardsContainer(favourites)}
             ${Navbar()}`
 }
-export function DetailsLayout(){
+export function DetailsLayout(recipe) {
     return `${Header()}
             ${SearchBar()}
+            ${Details(recipe)}
             ${Navbar()}`
 }

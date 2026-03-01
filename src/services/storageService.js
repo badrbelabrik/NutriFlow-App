@@ -1,12 +1,8 @@
 export function getRecipes() {
-    return JSON.parse(localStorage.getItem("recipes")) || []
-}
-export function getRecipesTimestamp() {
-    return Number(localStorage.getItem("recipes_timestamp"))
+    return JSON.parse(sessionStorage.getItem("recipes")) || []
 }
 export function setRecipes(recipes) {
-    localStorage.setItem("recipes", JSON.stringify(recipes))
-    localStorage.setItem("recipes_timestamp", Date.now())
+    sessionStorage.setItem("recipes", JSON.stringify(recipes))
 }
 
 export function getFavourites(){

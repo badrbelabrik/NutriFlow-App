@@ -1,4 +1,5 @@
 import { addToFav } from "./services/storageService.js"
+import { searchRecipe } from "./ui/render.js"
 
 export const clicks = document.addEventListener("click", function(e){
     const el = e.target
@@ -10,7 +11,8 @@ export const clicks = document.addEventListener("click", function(e){
     }
     if(el.closest(".card")){
         const id = el.closest(".card").dataset.id
-        this.location.hash = "#/details/"+id
+        location.hash = "#/details/"+id
+
     }
     if(el.closest(".go-favourites")){
         console.log("you clicked the button to go to favourites")
@@ -21,9 +23,10 @@ export const clicks = document.addEventListener("click", function(e){
     }
 })
 
-export const inputs = document.addEventListener("input", function(e){
+export const inputs = document.addEventListener("keydown", function(e){
     const el = e.target
-    if(el.classList.contains("search-bar")){
-        console.log(el.value)
+    if(e.key === "Enter" && el.classList.contains("search-bar-input")){
+        const inputValue = el.value
+        searchRecipe(inputValue)
     }
 })

@@ -1,5 +1,5 @@
-import { getFavourites } from "../services/storageService.js"
-import { Card } from "./components.js"
+import { getRecipes,getFavourites } from "../services/storageService.js"
+import { Card,MainLayout} from "./components.js"
 
 export function ListCards(recipes){
     const recipesList = []
@@ -11,4 +11,14 @@ export function ListCards(recipes){
         recipesList.push(cardDiv)
     }
     return recipesList.join("")
+}
+
+export function searchRecipe(inputValue){
+    const recipes = getRecipes()
+    const found = recipes.filter(item => (item.name.toLowerCase()).includes((inputValue.toLowerCase()))  )
+    if(found.length>0){
+        document.getElementById("root").innerHTML = `${MainLayout(found)}`
+    } else{
+        alert("no recipe found")
+    }
 }
