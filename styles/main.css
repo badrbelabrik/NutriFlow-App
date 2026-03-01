@@ -177,18 +177,23 @@
 .details-pills {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
+  color: #ccc;
 }
 .details-divider {
   border: none;
   height: 2px;
   background-color: #ccc;
 }
-.details-ingredients-title {
+.details-ingredients, .details-instructions {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+.details-ingredients-title, .details-instructions-title {
   font-weight: 700;
 }
-.details-instructions-title {
-  font-weight: 700;
+.details-ingredients li, .details-instructions li {
+  margin: 0.25rem 0;
 }
 
 .loader {

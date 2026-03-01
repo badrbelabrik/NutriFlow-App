@@ -53,21 +53,20 @@ export function Details(recipe) {
                 <img class="details-img" src="${recipe.image}" alt="">
                 <p class="details-title">${recipe.name}</p>
                 <div class="details-pills">
-                    <i class="fa-regular fa-clock">${recipe.prepTimeMinutes}</i>
-                    <i class="fa-solid fa-signal">${recipe.difficulty}</i>
-                    <i class="fa-solid fa-fire-flame-curved">${recipe.caloriesPerServing}</i>
+                    <i class="fa-regular fa-clock"></i>${recipe.prepTimeMinutes}
+                    <i class="fa-solid fa-signal"></i>${recipe.difficulty}
+                    <i class="fa-solid fa-fire-flame-curved"></i>${recipe.caloriesPerServing}
                 </div>
                 <div class="details-divider"></div>
-                <div class="details-ingredients">
-                    <p class="details-ingredients-title">Ingredients</p>
-                    <p>${recipe.ingredients}</p>
-                </div>
+                <p class="details-ingredients-title">Ingredients</p>
+                <ul class="details-ingredients">
+                    ${recipe.ingredients.map(item=> `<li>-${item}</li>`).join("")}
+                </ul>
                 <div class="details-divider"></div>
-                <div class="details-instructions">
-                    <p class="details-instructions-title">Instructions</p>
-                    <p>${recipe.instructions}</p>
-                </div>
-                </div>
+                <p class="details-instructions-title">Instructions</p>
+                <ol class="details-instructions">
+                    ${recipe.instructions.map(item => `<li>${item}</li>`).join("")}
+                </ol>
             </div>`
 }
 

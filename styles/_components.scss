@@ -101,22 +101,25 @@
     &-pills{
       display: flex;
       align-items: center;
-      gap: $space-md;
+      gap: $space-sm;
+      color: $gray;
     }
     &-divider{
       border: none;
       height: 2px;
-      background-color: #ccc;
+      background-color: $gray;
     }
-    &-ingredients{
-      &-title{
-        font-weight: $font-weight-bold;
-      }
+    &-ingredients,
+    &-instructions {
+      padding-left: 1.25rem; 
+      margin: 0;
+          &-title{
+          font-weight: $font-weight-bold;
+          }
     }
-    &-instructions{
-      &-title{
-        font-weight: $font-weight-bold;
-      }
+    &-ingredients li,
+    &-instructions li {
+      margin: 0.25rem 0;
     }
 }
 
