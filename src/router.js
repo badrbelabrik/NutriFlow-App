@@ -1,6 +1,7 @@
 import { CallRecipes } from "./api/recipeProvider.js";
 import { DetailsLayout, FavoritesLayout, MainLayout } from "./ui/components.js";
 import { getRecipes,getFavourites } from "./services/storageService.js";
+import { calcCalories } from "./services/calorieService.js";
 
 const Router = {
     init(){
@@ -12,7 +13,7 @@ const Router = {
                 if (!hash || hash === "#/" || hash === "#/home") {
                             root.innerHTML = `${MainLayout(recipes)}`;
                     } else if(hash == "#/favourites"){
-                        root.innerHTML = `${FavoritesLayout(favourites)}`
+                        root.innerHTML = `${FavoritesLayout(favourites,calcCalories())}`
                     } else if(hash.startsWith("#/details")){
                         const id = hash.split("/")[2]
                         const recipe = recipes.find(item => item.id == id)

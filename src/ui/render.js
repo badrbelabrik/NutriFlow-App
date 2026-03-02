@@ -6,7 +6,7 @@ export function ListCards(recipes){
     const favourites = getFavourites()
     for(const recipe of recipes){
         const checkFav = favourites.find(item => item.id == recipe.id)
-        const classGreen = checkFav ? "card-icon-green" : "";
+        const classGreen = checkFav ? "card-icon-red" : "";
         const cardDiv = Card(recipe,classGreen)
         recipesList.push(cardDiv)
     }
@@ -16,9 +16,10 @@ export function ListCards(recipes){
 export function searchRecipe(inputValue){
     const recipes = getRecipes()
     const found = recipes.filter(item => (item.name.toLowerCase()).includes((inputValue.toLowerCase()))  )
+    const container = document.querySelector(".cards-container")
     if(found.length>0){
-        document.getElementById("root").innerHTML = `${MainLayout(found)}`
+        container.innerHTML = ListCards(found)
     } else{
-        alert("no recipe found")
+        container.innerHTML = "<p>No recipe found</p>";
     }
 }

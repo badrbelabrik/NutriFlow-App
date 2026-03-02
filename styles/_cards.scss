@@ -49,8 +49,8 @@
             color: $primary-green;
             outline-style: outset;
         }
-        &-green{
-            color: $primary-green;
+        &-red{
+            color: red;
         }
     }
     &-pills{
@@ -72,7 +72,13 @@
             transform: scale(1.2)
         }
     }
-    &-calorie-icon{
+    &-calorie-green{
         color: $calorie-green;
+    }
+        &-calorie-orange{
+        color: orange;
+    }
+        &-calorie-red{
+        color: red;
     }
 }

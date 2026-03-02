@@ -123,6 +123,22 @@
     }
 }
 
+.daily{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: $radius-md;
+  background-color: $primary-green;
+  padding: $space-sm;
+  width: 400px;
+    &-h2,&-p{
+      font-family: $font-family-geneva;
+      font-weight: $font-weight-bold;
+      color: white;
+      font-size: medium;
+    }
+}
+
 .loader {
   width: 50px;
   padding: 8px;

@@ -1,12 +1,14 @@
 import { addToFav } from "./services/storageService.js"
 import { searchRecipe } from "./ui/render.js"
 
-export const clicks = document.addEventListener("click", function(e){
+export default function initEvents(){
+    const root = document.getElementById("root")
+root.addEventListener("click", function(e){
     const el = e.target
     if(el.closest(".card-icon")){
         const id = el.closest(".card-icon").dataset.fav
         addToFav(id)
-        el.closest(".card-icon").classList.toggle("card-icon-green")
+        el.closest(".card-icon").classList.toggle("card-icon-red")
         return
     }
     if(el.closest(".card")){
@@ -23,10 +25,11 @@ export const clicks = document.addEventListener("click", function(e){
     }
 })
 
-export const inputs = document.addEventListener("keydown", function(e){
+root.addEventListener("input", function(e){
     const el = e.target
-    if(e.key === "Enter" && el.classList.contains("search-bar-input")){
-        const inputValue = el.value
-        searchRecipe(inputValue)
+    if(el.classList.contains("search-bar-input")){
+        searchRecipe(el.value)
     }
 })
+}
+

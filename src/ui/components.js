@@ -1,4 +1,5 @@
 import { ListCards } from "./render.js"
+import { getNutriBadge } from "../services/calorieService.js";
 
 export function Header() {
     return `<div class="header">
@@ -18,13 +19,14 @@ export function SearchBar() {
             </div>`
 }
 export function Card(recipe, classGreen) {
+    const badgeClass = getNutriBadge(recipe.caloriesPerServing);
     return `<div class="card" data-id="${recipe.id}">
                 <div class="card-content">
                     <p class="card-title">${recipe.name}</p>
                     <div class="card-pills">
                         <div class="card-pill"><i class="fa-solid fa-clock"></i>${recipe.prepTimeMinutes}min</div>
                         <div class="card-pill"><i class="fa-solid fa-user"></i>${recipe.servings}</div>
-                        <div class="card-pill"><i class="card-calorie-icon fa-solid fa-fire-flame-curved"></i>${recipe.caloriesPerServing}Kcal</div>
+                        <div class="card-pill"><i class="${badgeClass} fa-solid fa-fire-flame-curved"></i>${recipe.caloriesPerServing}Kcal</div>
                     </div>
                 </div>
                 <div class="card-img-wrapper">
@@ -76,9 +78,13 @@ export function MainLayout(recipes) {
             ${CardsContainer(recipes)}
             ${Navbar()}`
 }
-export function FavoritesLayout(favourites) {
+export function FavoritesLayout(favourites,totalCal) {
     return `${Header()}
             ${SearchBar()}
+            <div class="daily">
+                <h2 class="daily-h2">Total calories:</h2>
+                <p class="daily-p">${totalCal} Kcal</p>
+            </div>
             ${CardsContainer(favourites)}
             ${Navbar()}`
 }

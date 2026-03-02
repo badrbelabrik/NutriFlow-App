@@ -50,8 +50,8 @@
   color: #089B63;
   outline-style: outset;
 }
-.card-icon-green {
-  color: #089B63;
+.card-icon-red {
+  color: red;
 }
 .card-pills {
   display: flex;
@@ -72,8 +72,14 @@
 .card-pill:hover {
   transform: scale(1.2);
 }
-.card-calorie-icon {
+.card-calorie-green {
   color: #9bff05;
+}
+.card-calorie-orange {
+  color: orange;
+}
+.card-calorie-red {
+  color: red;
 }
 
 .header {
@@ -194,6 +200,22 @@
 }
 .details-ingredients li, .details-instructions li {
   margin: 0.25rem 0;
+}
+
+.daily {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  background-color: #089B63;
+  padding: 8px;
+  width: 400px;
+}
+.daily-h2, .daily-p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: medium;
 }
 
 .loader {

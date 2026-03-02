@@ -9,3 +9,13 @@ export function calcCalories(){
     }
     return totalCal
 }
+
+export function getNutriBadge(calories) {
+    if (calories < 400) {
+        return "card-calorie-green";
+    }
+    if (calories <= 800) {
+        return "card-calorie-orange";
+    }
+    return "card-calorie-red";
+}
